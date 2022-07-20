@@ -19,8 +19,8 @@ class ElapsedTimeText extends StatelessWidget {
     final hoursStr = hours.toString().padLeft(2, '0');
     const digitWidth = 21.0;
 
-    bool isSecondsActive = seconds != 0;
-    bool isMinutesActive = minutes != 0;
+    bool isSecondsActive = (minutes != 0 || seconds != 0);
+    bool isMinutesActive = (hours != 0 || minutes != 0);
     bool isHoursActive = hours != 0;
 
     return Row(

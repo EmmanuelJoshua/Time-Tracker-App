@@ -58,7 +58,8 @@ class _TimeTrackerState extends State<TimeTracker>
           ClockRenderer(
             elapsed: _elapsed,
           ),
-          const Gap(70),
+          const ButtonRow(),
+          const Gap(30),
           ElapsedTimeText(
             elapsed: _elapsed,
           ),
@@ -70,11 +71,8 @@ class _TimeTrackerState extends State<TimeTracker>
         ],
       ),
       bottomSheet: Container(
-        padding: const EdgeInsets.only(
-          left: 20,
-          right: 20,
-        ),
-        height: MediaQuery.of(context).size.height / 4,
+        padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
+        height: MediaQuery.of(context).size.height / 3.8,
         decoration: const BoxDecoration(
           color: white,
           borderRadius: BorderRadius.only(
@@ -87,6 +85,152 @@ class _TimeTrackerState extends State<TimeTracker>
           ),
         ),
         width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  'TODAY',
+                  style: TextStyle(
+                    color: Color(0xff36383c),
+                    fontSize: 23,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  '12 July - 01:25:36',
+                  style: TextStyle(
+                    color: Color(0xffc6c6c6),
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+            const Gap(20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: const Color(0xffb9f3ed)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 4),
+                      child: const Center(
+                        child: Text(
+                          'Personal',
+                          style: TextStyle(
+                            color: Color(0xff6baca6),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Gap(9),
+                    Text(
+                      'Add description...',
+                      style: TextStyle(
+                        color: const Color(0xff6baca6).withOpacity(0.7),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      '00:25:35',
+                      style: TextStyle(
+                        fontSize: 27.5,
+                        fontWeight: FontWeight.bold,
+                        color: black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const Gap(2),
+                    Text(
+                      '3:15PM - 3:40PM',
+                      style: TextStyle(
+                        color: const Color(0xff6baca6).withOpacity(0.7),
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const Gap(15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: const Color(0xffc4c8f4)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 4),
+                      child: const Center(
+                        child: Text(
+                          'Home',
+                          style: TextStyle(
+                            color: Color(0xff8084bb),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Gap(9),
+                    Text(
+                      'Add description...',
+                      style: TextStyle(
+                        color: const Color(0xff6baca6).withOpacity(0.7),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      '00:10:35',
+                      style: TextStyle(
+                        fontSize: 27.5,
+                        fontWeight: FontWeight.bold,
+                        color: black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const Gap(2),
+                    Text(
+                      '2:30PM - 2:40PM',
+                      style: TextStyle(
+                        color: const Color(0xff6baca6).withOpacity(0.7),
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
